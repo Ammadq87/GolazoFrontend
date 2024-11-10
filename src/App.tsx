@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div>
-        <p>Golazo Frontend</p>
+        <p className='text-2xl text-red-600'>Golazo Frontend</p>
       </div>
     </>
   )
