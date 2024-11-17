@@ -2,20 +2,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Navbar from './components/Navbar'
 import { Toaster } from 'react-hot-toast'
+import Home from './pages/Home';
 
 function App() {
 
   return (
     <>
       <Router>
-        <div className="flex flex-row h-screen">
-          <div className='w-screen border border-red-500'>
-            <div id="side_content" className="h-full w-48">
-              <Navbar />
-            </div>
-            <div id="main_content">
+        <div className="flex flex-row">
+          <div className='w-screen h-screen flex'>
+            <Navbar />
+            <div id="main_content" className="h-screen w-full">
               <Routes>
-                <Route path='/' />
+                <Route path='/' element={<Home />} />
                 <Route path='/auth'>
                   <Route path='login' />
                   <Route path='register' />
